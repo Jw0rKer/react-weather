@@ -1,0 +1,30 @@
+{
+  "name": "react-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-core":"",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "",
+    "babel-preset-react": "",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5",
+    "webpack": "",
+    "webpack-cli": "^3.1.0",
+    "html-webpack-plugin":"",
+    "clean-webpack-plugin":""
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  }
+}
