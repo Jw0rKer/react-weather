@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import './Weather.css'
+import './App.css'
 
-class App extends Component {
+class Weather extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+        <div className="card">
+          <h1 className="App-title">{this.props.title}</h1>
+          <div>
+            <span className="current">{Math.round(this.props.current)}</span> <i>°c</i>
+          </div>
+          <div className='inline'>
+            <span className={`state-icon-sml state-${this.props.abbr}`}></span>
+            <span>{this.props.state}</span>
+          </div>
+          <div>min: {Math.round(this.props.min)}°c</div>
+          <div> max: {Math.round(this.props.max)}°c</div>
+        </div>
+      );
   }
 }
 
-export default App;
+export default Weather;

@@ -1,0 +1,38 @@
+.state-icon-graph, .state-icon-tiny, .state-icon-sml, .state-icon-lrg {
+  display:inline-block;
+}
+.state-icon-graph {
+  width:24px;
+  height:24px;
+}
+.state-icon-tiny {
+  width:1em;
+  height:1em;
+  margin-right:2px;
+}
+.state-icon-sml {
+  width:32px;
+  height:32px;
+  margin:0 5px 0 0;
+}
+.state-icon-lrg {
+  width:50px;
+  height:50px;
+  margin:0 5px 0 0;
+}
+
+.state-sn {background:url("./static/weatherIcons/sn.svg")}
+.state-sl {background:url("./static/weatherIcons/sl.svg")}
+.state-h {background:url("./static/weatherIcons/h.svg")}
+.state-t {background:url("./static/weatherIcons/t.svg")}
+.state-hr {background:url("./static/weatherIcons/hr.svg")}
+.state-lr {background:url("./static/weatherIcons/lr.svg")}
+.state-s {background:url("./static/weatherIcons/s.svg")}
+.state-hc {background:url("./static/weatherIcons/hc.svg")}
+.state-lc {background:url("./static/weatherIcons/lc.svg")}
+.state-c {background:url("./static/weatherIcons/c.svg")}
+
+.current{
+  font-weight: bold;
+  font-size: 20px;
+}
