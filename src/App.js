@@ -9,6 +9,7 @@ class App extends Component {
       <HashRouter>
         <div className="main">
             <Route exact path="/" component={Home}/>
+            <Route path="/search/:keyword" component={Home}/>
         </div>
       </HashRouter>
     );

@@ -39,16 +39,42 @@ class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state ={cities:initData};
+    this.state =null;
+    this.search.bind(this);
   }
 
+  search(keyword){
+    if (keyword != null) {
+      fetch('http://localhost/weather.php?command=search&keyword=' + keyword)
+        .then(response => response.json())
+        .then( json =>{
+          console.log({cities:json})
+          this.setState(null);
+          this.setState({cities:json});
+        })
+        .catch(e => console.error(e));
+    }else{
+      this.setState({cities:initData});
+    }
+  }
+
+  componentDidMount(){
+    alert('componentDidMount')
+    this.search(this.props.match.params.keyword);
+  }
+
+  componentWillReceiveProps(nextPorps){
+    alert('componentWillReceiveProps')
+    this.search(nextPorps.match.params.keyword);
+  }
 
 
   render() {
     return (
       <div>
         <Search/>
-        {(this.state != null) ? (this.state.cities.map((city, i) =>
+        {(this.state != null) ? (
+          this.state.cities.map((city, i) =>
             <City woeid={city.woeid}/>
           )) :
           <span>No Result found</span>
